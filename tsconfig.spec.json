@@ -1,6 +1,7 @@
 {
   "extends": "./tsconfig.json",
   "compilerOptions": {
+    "skipNgcc": true,
     "outDir": "./out-tsc/spec",
     "types": [
       "jest",

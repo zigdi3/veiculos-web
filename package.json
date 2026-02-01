@@ -5,7 +5,7 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "jest",
+    "test": "jest --runInBand --workerThreads=4 --detectOpenHandles --noStackTrace",
     "test:watch": "jest --watch"
   },
   "private": true,
@@ -41,7 +41,6 @@
     "setupFilesAfterEnv": [
       "<rootDir>/setup-jest.ts"
     ],
-    "globalSetup": "jest-preset-angular/global-setup",
     "testPathIgnorePatterns": [
       "/node_modules/",
       "/dist/"
@@ -53,11 +52,15 @@
       "node_modules",
       "src"
     ],
+    "moduleNameMapper": {
+      "^src/environments/environment$": "<rootDir>/src/environments/environment.development.ts",
+      "^src/environments/environment.development$": "<rootDir>/src/environments/environment.development.ts"
+    },
     "transform": {
       "^.+\\.(ts|html|css)$": [
         "jest-preset-angular",
         {
-          "tsconfig": "<rootDir>/tsconfig.spec.json",
+          "tsconfig": "<rootDir>/tsconfig.json",
           "stringifyContentPathRegex": "\\.(html|css)$"
         }
       ]
