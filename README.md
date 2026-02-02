@@ -1,27 +1,40 @@
-# VeiculosWeb
+# Veiculos WEB
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.16.
+Projeto conceito de sistema para registrar, editar, listar e deletar registros de veiculos
 
-## Development server
+## Pacotes utilizados neste projeto:
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+[Angular 16](https://v16.angular.io/guide/update-to-version-16) -  Framework javascript pra desenvolvimento web de apps  Single Page Appilcations.
 
-## Code scaffolding
+[Tailwindcss](https://tailwindcss.com/docs/installation/using-vite/) - Estilização de UI flexível e robusta.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Versão
 
-## Build
+Esse Projeto precisa pelo menos do nodejs versão 20.19.x + para funcionar.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Instalação
 
-## Running unit tests
+Execute no terminal o seguinte comando:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```
+ng build
+```
 
-## Running end-to-end tests
+## Execução
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Garanta que o projeto backend esteja rodando no host local na port=3000:
 
-## Further help
+```
+https://localhost:3000
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+No terminal do projeto execute a aplicação angular:
+
+```
+npm run start
+```
+
+Acesse " http://localhost:4200 "
+
+Faça a inclusão do veículos preenchendo as informações necessárias. Ele será listado abaixo na tabela de dados.
+
